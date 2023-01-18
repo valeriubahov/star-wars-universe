@@ -1,0 +1,25 @@
+html {
+  scrollbar-color: blue white;
+  scrollbar-width: thin;
+}
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-image: url("/src/images/background/starsWars.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(75, 213, 238);
+  border-radius: 10px;
+}
