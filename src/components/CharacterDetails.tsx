@@ -21,7 +21,7 @@ const CharacterDetails: React.FC<CharacterDetailsInterface> = ({ character, onCl
   });
 
   const specie = species!.find((spec) => {
-    if (character!.species) {
+    if (character!.species.length) {
       const planetId = getIdFromUrl(spec.url);
       const specieWorld = getIdFromUrl(character!.species[0].toString());
       return planetId === specieWorld;
@@ -39,7 +39,7 @@ const CharacterDetails: React.FC<CharacterDetailsInterface> = ({ character, onCl
       <Box py={2}>
         <Container maxWidth="sm">
           <Typography variant="body2">Specie</Typography>
-          <Typography variant="body2">{specie!.name}</Typography>
+          <Typography variant="body2">{specie ? specie!.name : "Unknown"}</Typography>
         </Container>
 
         <Container maxWidth="sm">

@@ -10,6 +10,7 @@ const ImageContainer: React.FC<ImageBox> = ({ fileName, componentName }) => {
       alt={fileName}
       image={require(`/src/images/${componentName}/${fileName
         .replaceAll(" ", "")
+        .replaceAll("é", "e")
         .toLowerCase()}.png`)}
       sx={{
         pointerEvents: "none",
