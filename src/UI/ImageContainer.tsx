@@ -1,4 +1,5 @@
 import { CardMedia } from "@mui/material";
+
 interface ImageBox {
   fileName: string;
   componentName: string;
@@ -7,6 +8,7 @@ const ImageContainer: React.FC<ImageBox> = ({ fileName, componentName }) => {
   return (
     <CardMedia
       component="img"
+      loading={"lazy"}
       alt={fileName}
       image={require(`/src/images/${componentName}/${fileName
         .replaceAll(" ", "")
